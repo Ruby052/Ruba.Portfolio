@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruba's Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+ <style>
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+--plum: #7B3563;
+
+--deep-plum: #6E2952;
+
+--butter: #EFD98A;
+
+--light-butter: #F7E7BE;
+
+--sage: #A8B97C;
+
+--dark-text: #4B2B3D;
+}
+
+@font-face {
+   font-family: "Ohno Blazeface";
+   src: url("OhnoBlazefaceDemo-12Point.otf") format("opentype");
+}
+
+@font-face {
+   font-family: "Cy Grotesk";
+   src: url("CyGrotesk-GrandMedium.otf") format("opentype");
+}
+
+@font-face {
+   font-family: "Cy Grotesk 2";
+   src: url("CyGrotesk-GrandDemi.otf") format("opentype");
+}
+
+
+    body {
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      background-color: #F5EDD1;
+    }
+
+    header {
+      height: 180px;
+      background-color: var(--deep-plum);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+
+    header h1 {
+  color: var(--butter);
+  font-size: 4.5rem;
+  letter-spacing: 2.5px;
+  font-family: 'Ohno Blazeface', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 #4A223A;
+}
+
+
+nav {
+  background-color: var(--light-butter);
+
+  padding: 15px 0;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 5;
+}
+
+nav ul {
+  list-style: none;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 50px;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+
+  color: var(--plum);
+
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: 700;
+
+  font-size: 1.5rem;
+
+  transition: 0.3s ease;
+  padding: 8px 16px;
+}
+
+nav a:hover {
+  color: var(--light-butter);
+
+  background-color: var(--sage);
+
+  padding: 8px 16px;
+
+  border-radius: 20px;
+  
+  transform: translate(-2px);
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.home-section {
+  background-color: #F5EDD1;
+  padding-top: 90px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-card {
+  max-width: 800px;
+  background-color: #F7E7BE;
+  border: 4px solid var(--deep-plum);
+  border-radius: 30px;
+  padding: 55px 40px;
+  text-align: center;
+  box-shadow: 10px 10px 0 var(--sage);
+}
+
+.home-card h2 {
+  font-family: "Cy Grotesk", sans-serif;
+  color: var(--deep-plum);
+  font-size: 2.8rem;
+  font-weight: 650;
+  margin-bottom: 30px;
+  letter-spacing: 0px;
+  line-height: 1.1;
+}
+
+.home-card p {
+  font-family: "Open Sans", sans-serif;
+  color: #4B2B3D;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: var(--plum);
+  color: var(--butter);
+  font-family: "Ohno Blazeface", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 999px;
+  border: 3px solid var(--sage);
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #AFC07A;
+  color: var(--deep-plum);
+  border: 3px solid var(--plum);
+  transform: translateY(-2px);
+}
+
+.about-section {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  max-width: 900px;
+  background-color: var(--light-butter);
+
+  border: 4px solid var(--deep-plum);
+  border-radius: 35px;
+
+  padding: 55px 40px;
+
+  box-shadow: 10px 10px 0 var(--sage);
+
+  text-align: center;
+}
+
+.about-card h2 {
+  font-family: "Cy Grotesk";
+  color: var(--deep-plum);
+
+  font-size: 3rem;
+
+  margin-bottom: 25px;
+}
+
+.about-card p {
+  font-family: "Open Sans", sans-serif;
+
+  font-size: 1.3rem;
+
+  font-weight: 600;
+
+  color: var(--dark-text);
+
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+}
+
+.about-tags {
+  margin-top: 30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.about-tags span {
+  background-color: var(--sage);
+
+  color: var(--plum);
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  font-family: "Open Sans", sans-serif;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+}
+
+.skills-section {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-family: "Cy Grotesk";
+  color: var(--deep-plum);
+  font-size: 4rem;
+  margin-bottom: 55px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px 80px;
+}
+
+.skill-card {
+  display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+  background-color: var(--light-butter);
+  border: 4px solid var(--deep-plum);
+  border-radius: 25px;
+  box-shadow: 8px 8px 0 var(--sage);
+  width: 280px;
+  min-height: 190px;
+  padding: 35px 25px;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              background-color 0.3s ease;
+}
+
+.skill-card h3 {
+  font-family: "Cy Grotesk 2", sans-serif;
+  color: var(--plum);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.skill-card p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark-text);
+  font-size: 1rem;
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 14px 14px 0 var(--sage);
+
+    background-color: #F9EDC7;
+}
+
+.projects-section {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-family: "Cy Grotesk", sans-serif;
+  color: var(--deep-plum);
+  font-size: 4rem;
+  margin-bottom: 55px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.project-card {
+  width: 380px;
+  background-color: var(--light-butter);
+  border: 4px solid var(--deep-plum);
+  border-radius: 30px;
+  box-shadow: 10px 10px 0 var(--sage);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 14px 14px 0 var(--sage);
+}
+
+.project-preview {
+  height: 180px;
+  border-radius: 22px;
+  border: 3px solid var(--deep-plum);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-preview span {
+  font-family: "Cy Grotesk 2", sans-serif;
+  font-size: 1.5rem;
+  color: var(--butter);
+}
+
+
+.project-preview img {
+    transform: scale(1.05);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+.project-card h3 {
+  font-family: "Cy Grotesk 2", sans-serif;
+  color: var(--plum);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-tags span {
+  display: inline-block;
+  background-color: var(--plum);
+  color: var(--butter);
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.87rem;
+  font-weight: 800;
+}
+
+.contact-section {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contact-card {
+
+   background-color: var(--light-butter);
+
+   border: 4px solid var(--deep-plum);
+
+   border-radius: 35px;
+
+   box-shadow: 10px 10px 0 var(--sage);
+
+   padding: 50px;
+
+   max-width: 1000px;
+
+   margin: auto;
+}
+
+.contact-section h2 {
+  font-family: "Cy Grotesk", sans-serif;
+  color: var(--deep-plum);
+  font-size: 4rem;
+  margin-bottom: 55px;
+}
+
+.contact-card p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--dark-text);
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 35px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    background-color: #F5EDD1;
+
+    border: 3px solid var(--deep-plum);
+
+    border-radius: 22px;
+
+    padding: 14px 18px;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 1rem;
+
+    color: var(--dark-text);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+    color: #7C6E74;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+
+    resize: none;
+}
+
+.contact-form button {
+
+    align-self: center;
+
+    background-color: var(--plum);
+
+    color: var(--butter);
+
+    border: 3px solid var(--sage);
+
+    border-radius: 999px;
+
+    padding: 14px 28px;
+
+    font-family: "Cy Grotesk", sans-serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 6px 6px 0 var(--sage);
+}
+
+footer {
+    background-color: var(--deep-plum);
+    color: var(--butter);
+
+    text-align: center;
+
+    padding: 14px 10px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Ruba's Portfolio</h1>
+  </header>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home" class="home-section">
+  <div class="home-card">
+    <h2>Welcome to my Portfolio</h2>
+    <p>
+      A space where I will be introducing myself through my skills, hobbies and projects.
+      <br>Happy Scrolling :]
+    </p>
+
+    <a href="#about" class="home-button">Hello👋</a>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+
+  <div class="about-card">
+
+    <h2>About Me</h2>
+
+    <p>
+      Hello! My name is Ruba and I am currently studying website design and development.
+      Where I get to enjoy learning how websites are created and improving my skills in HTML, CSS and JavaScript.
+    </p>
+
+    <p>
+      I wanted this e-portfolio to showcase my creativity while also showing my progress and achievements.
+      I enjoy doing creative projects and experimenting with colours and layouts.
+    </p>
+
+    <div class="about-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Design</span>
+      <span>Creativity</span>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="skills" class="skills-section">
+  <h2>Skills & Interests</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <h3>HTML</h3>
+      <p>I learned HTML to better understand how to structure webpages using headings, paragraphs,
+        images, buttons and sections.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Fashion</h3>
+      <p>I have always enjoyed fashion and the ability to express personality through clothing.
+        So, I hope to one day be able to do the same.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Crochet</h3>
+      <p>I first learned crochet as a hobby, but I eventually started making 
+        keychains and small cat dolls with their own tiny wardrobes🐾   
+</p>
+<pre>
+/\_/\
+= ( •.• ) =
+     /     \     
+</pre>
+    </div>
+
+    <div class="skill-card">
+      <h3>Design</h3>
+      <p>Whenever it comes to the design aspect of things, i always get very invested in
+         experimenting with the colour palettes, typography, layouts and visual style.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects" class="projects-section">
+  <h2>Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-preview">
+          <img src="portfolio.png" alt="Screenshot of my portfolio website">
+</div>
+
+      <h3>E-Portfolio Website</h3>
+      <p>
+        This is the first personal website I designed and built using HTML and CSS, so I really 
+        hope my skills, interests and creative style show well.
+      </p>
+
+      <div class="project-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Design</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-preview">
+        <img src="beach.jpg" alt="Photograph of a rocky coastline">
+</div>
+
+      <h3>Coastal Memories</h3>
+      <p>
+        This is a more personal project inspired by my love for beaches and my dream of visiting
+        coastlines around the world.
+      </p>
+
+      <div class="project-tags">
+        <span>Photography</span>
+        <span>Travel</span>
+        <span>Personal</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact</h2>
+
+    <div class="contact-card">
+
+        <p>
+            Feel free to send me a message or reach out and I'll get back to you ASAP :]
+        </p>
+
+        <form class="contact-form" id="contactForm">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+</section>
+<script>
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thank you! Your message has been sent👍");
+    form.reset();
+  });
+</script>
+<footer>
+  <p>© 2026 Ruba’s Portfolio.</p>
+</footer>
+
+</body>
+</html>
