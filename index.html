@@ -92,7 +92,7 @@ nav ul {
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 50px;
 
   margin: 0;
   padding: 0;
@@ -124,7 +124,21 @@ nav a:hover {
   
   transform: translate(-2px);
 }
+   
+@media (max-width: 768px) {
 
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+
+}
+   
 section {
     padding: 50px 20px;
 }
